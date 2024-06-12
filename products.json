@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name":"Whiskas Cat Food",
+        "price": 200,
+        "image": "asset/catfood.jpg"
+    },
+    {
+        "id": 2,
+        "name":"CatCare Cat food",
+        "price": 200,
+        "image": "asset/catfood1.jpg"
+    },
+    {
+        "id": 3,
+        "name":" ProDiet Cat food",
+        "price": 290,
+        "image": "asset/catfood2.jpg"
+    },
+    {
+        "id": 4,
+        "name":" Alpo Dog Food",
+        "price": 200,
+        "image": "asset/dogfood.jpg"
+    },
+    {
+        "id": 5,
+        "name":" Pedigree Dog Food",
+        "price": 300,
+        "image": "asset/dogfood1.jpg"
+    },
+    {
+        "id": 6,
+        "name":" Topbreed Dog Food",
+        "price": 200,
+        "image": "asset/dogfood2.jpg"
+    }
+]

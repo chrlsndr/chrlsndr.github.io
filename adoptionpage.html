@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>signin-signup</title>
+</head>
+
+<body class="loginbody">
+    <div class="container1">
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+                <h2 class="title">Adoption</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Full Name" id="fname">
+                </div>
+                <p id="errorText1" style="display: none; color: red; text-align: start;">Insert Name</p>
+                <div class="input-field">
+                    <i class="fa fa-address-book"></i>
+                    <input type="email" placeholder="Address" id="address">
+                </div>
+                <p id="errorText2" style="display: none; color: red; text-align: start;">Insert Address</p>
+                <div class="input-field">
+                    <i class="fa fa-mobile"></i>
+                    <input type="email" placeholder="Phone Number" id="phone">
+                </div>
+                <p id="errorText3" style="display: none; color: red; text-align: start;">Insert Phone number</p>
+                <input type="submit" id="sub" value="Adopt" class="btn">
+                <a href="adoption.html" class="btn" id="back">Back</a> 
+            </form>
+            <form>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                </div>
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <img src="asset/paws1_1.png">
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("sub").addEventListener("click", function (e) {
+            
+            
+                e.preventDefault()
+            
+                var fullname = document.getElementById("fname").value
+                var address = document.getElementById("address").value
+                var phonenumber = document.getElementById("phone").value
+                var errorText = document.getElementById("errorText")
+                var pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+                if (fullname == "") {
+                    errorText1.style.display = "block"
+                } else {
+                    errorText1.style.display = "none"
+                }
+
+                if (address == "") {
+                    errorText2.style.display = "block"
+                } else {
+                    errorText2.style.display = "none"
+                }
+
+                if (phonenumber == "") {
+                    errorText3.style.display = "block"
+                } else {
+                    errorText3.style.display = "none"
+                }
+
+                if (fullname != "" || address != "" || phonenumber != ""){
+                    alert("Adoption Successful, Please bring Valid ID to the store to pick up you new furbaby")
+                    window.location.assign("adoption.html")
+                }
+        
+                });
+        </script>
+</body>
+
+</html>
+

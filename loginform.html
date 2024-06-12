@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>signin-signup</title>
+</head>
+
+<body class="loginbody">
+    <div class="container1">
+        <div class="signin-signup">
+            <form action="homepage.html" class="sign-in-form">
+                <h2 class="title">Sign In</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Name" id="nickname" required>
+                </div>
+                <p id="errorText1" style="display: none; color: red; text-align: start;">Insert Name</p>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="email" placeholder="Email" id="user" required>
+                </div>
+                <p id="errorText2" style="display: none; color: red; text-align: start;">Invalid Email</p>
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" id="pass">
+                </div>
+                <p id="errorText3" style="display: none; color: red; text-align: start;">Insert Password</p>
+                <input type="submit" id="sub" value="Login" class="btn" onclick="passData();">
+            </form>
+            <form>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                </div>
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <img src="asset/paws1_1.png">
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("sub").addEventListener("click", function (e) {
+                e.preventDefault()
+                const nickname = document.getElementById("nickname").value;
+                var email = document.getElementById('user').value
+                var pass = document.getElementById("pass").value
+                var errorText = document.getElementById("errorText")
+                var pattern = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+                if (nickname == "") {
+                    errorText1.style.display = "block"
+                } else {
+                    errorText1.style.display = "none"
+                }
+
+                if (pass == "") {
+                    errorText3.style.display = "block"
+                } else {
+                    errorText3.style.display = "none"
+                }
+
+                if (email.match(pattern)) {
+                    errorText2.style.display = "none"
+                    if (email == email && pass == pass) {
+                        if (nickname == "") {
+                            alert("Insert Name")
+                        } else if (email == "") {
+                            alert("Insert Email")
+                        } else if (pass == "") {
+                            alert("Insert Password")
+                        } else {
+                            alert("Logged in successfully")
+                            window.location.assign("homepage.html")
+                        }
+                        // console.log("logged in");
+                    }
+                } else {
+                    errorText2.style.display = "block"
+                }
+            });
+        </script>
+</body>
+
+</html>
