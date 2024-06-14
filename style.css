@@ -715,3 +715,49 @@ nav {
 
 
 }
+
+@media only screen and (min-width: 768px) {
+   .header {
+       padding: 20px 10%;
+   }
+
+   .logo {
+       margin-left: 70px;
+   }
+
+   .navbar a {
+       font-size: 25px;
+       margin-left: 35px;
+   }
+
+   .home-content p {
+       font-size: 10px;
+   }
+
+   .home-content h1 {
+       font-size: 40px;
+   }
+
+   .home-content h3 {
+       font-size: 20px;
+   }
+
+   .home-content .btn-box {
+       width: 350px;
+   }
+
+   #pic1 {
+       width: 70px;
+       height: 60px;
+       margin-left: -10px;
+   }
+   
+   
+}
+
+@media only screen and (min-width: 600px){
+   .gif>img{
+      margin: auto;
+      width: 300px;
+   }
+}
